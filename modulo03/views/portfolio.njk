@@ -1,101 +1,50 @@
-{% extends "layout.html" %}
+{% extends "layout.njk" %}
 {% block head %}
   <title>Portfolio - Teste</title>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-{% endblock %}
-{% block content %}
-  <div id="wrapper">
-    <h1>Aulas</h1>
-  </div>
-  <section class="cards">
-    <div class="card" id="GykTLqODQuU">
-      <div class="card__image-container">
-        <img src="https://img.youtube.com/vi/GykTLqODQuU/maxresdefault.jpg" alt="video-aula"/>
-      </div>
-      <div class="card__content">
-        <p>Formulário Animado com JS puro e CSS Animation | Mayk Brito</p>
-      </div>
-      <div class="card__info">
-        <p>57 min</p>
-        <p class="card__price">Free</p>
+  {% endblock %}
+  {% block content %}
+    <div id="wrapper">
+      <h1>Aulas</h1>
+    </div>
+    <section class="cards">
+      {% for item in items %}
+        {# nunjuks usa {{}} #}
+        <div class="card" id="{{ item.id }}">
+          <div
+            class="card__image-container {{ 'featured-wrapper' if item.featured }} ">
+            {#  duas classes só quando tiver o featured  #}
+            <img src="https://img.youtube.com/vi/{{ item.id }}/maxresdefault.jpg" alt="Imagem de {{ item.title }}">
+              {% if item.featured %}
+                <div class="featured">Featured</div>
+              {% endif %}
+            </div>
+            <div class="card__content">
+              <p>{{ item.title }}</p>
+            </div>
+            <div class="card__info">
+              <p>{{ item.duration }}</p>
+              <p class="card__price">{{ item.price }}</p>
+            </div>
+          </div>
+        {% endfor %}
+      </section>
+      <!-- modal -->
+      <div class="modal-overlay">
+        <div class="modal">
+          <a
+            class="close-modal">
+            <!-- classe material icons (Google) -->
+            <i class="material-icons">close</i>
+          </a>
+          <!-- conter o video (iframe) -->
+          <div
+            class="modal-content">
+            <!-- video aqui -->
+            <iframe src="" frameborder="0"></iframe>
+          </div>
+        </a>
       </div>
     </div>
-    <div class="card" id="HN1UjzRSdBk">
-      <div class="card__image-container">
-        <img src="https://img.youtube.com/vi/HN1UjzRSdBk/maxresdefault.jpg" alt="video-aula"/>
-      </div>
-      <div class="card__content">
-        <p>Desvendando o CSS Grid na pŕatica | Mayk Brito</p>
-      </div>
-      <div class="card__info">
-        <p>36 min</p>
-        <p class="card__price">Free</p>
-      </div>
-    </div>
-    <div class="card" id="rAzHvYnQ8DY">
-      <div class="card__image-container">
-        <img src="https://img.youtube.com/vi/rAzHvYnQ8DY/maxresdefault.jpg" alt="video-aula"/>
-      </div>
-      <div class="card__content">
-        <p>Array: Higher Order Functions | Mayk Brito</p>
-      </div>
-      <div class="card__info">
-        <p>54 min</p>
-        <p class="card__price">Free</p>
-      </div>
-    </div>
-    <div class="card" id="ghTrp1x_1As">
-      <div class="card__image-container">
-        <img src="https://img.youtube.com/vi/ghTrp1x_1As/maxresdefault.jpg" alt="video-aula"/>
-      </div>
-      <div class="card__content">
-        <p>O que é API? REST e RESTful? | Mayk Brito</p>
-      </div>
-      <div class="card__info">
-        <p>33 min</p>
-        <p class="card__price">Free</p>
-      </div>
-    </div>
-    <div class="card" id="GSqR2i-Pq6o">
-      <div class="card__image-container">
-        <img src="https://img.youtube.com/vi/GSqR2i-Pq6o/maxresdefault.jpg" alt="video-aula"/>
-      </div>
-      <div class="card__content">
-        <p>Desvendando a Variável this no Javascript | Mayk Brito</p>
-      </div>
-      <div class="card__info">
-        <p>48 min</p>
-        <p class="card__price">Free</p>
-      </div>
-    </div>
-    <div class="card" id="2alg7MQ6_sI">
-      <div class="card__image-container">
-        <img src="https://img.youtube.com/vi/2alg7MQ6_sI/maxresdefault.jpg" alt="video-aula"/>
-      </div>
-      <div class="card__content">
-        <p>Git e Github na Prática | Mayk Brito</p>
-      </div>
-      <div class="card__info">
-        <p>33 min</p>
-        <p class="card__price">Free</p>
-      </div>
-    </div>
-  </section>
-  <!-- modal -->
-  <div class="modal-overlay">
-    <div class="modal">
-      <a
-        class="close-modal">
-        <!-- classe material icons (Google) -->
-        <i class="material-icons">close</i>
-      </a>
-      <!-- conter o video (iframe) -->
-      <div
-        class="modal-content">
-        <!-- video aqui -->
-        <iframe src="" frameborder="0"></iframe>
-      </div>
-    </a>
-  </div>
-</div>
-<script src="scripts.js"></script>{% endblock %}
+    <script src="scripts.js"></script>
+  {% endblock %}

@@ -8,14 +8,29 @@ const videos = require("./data");
 server.use(express.static("public"));
 
 // config template engine
-server.set("view engine", "html");
+server.set("view engine", "njk");
 
 nunjucks.configure("views", {
   express: server,
+  autoescape: false,
+  noCache: true,
 });
 
 server.get("/", function (req, res) {
-  return res.render("about");
+  const about = {
+    avatar_url: "https://media.giphy.com/media/ko7twHhomhk8E/giphy.gif",
+    name: "Reinaldo Ponce Junior",
+    role: "Programador Fullstack em construção",
+    description: "Buscando se tornar um profissional bem capacitado!",
+    links: [
+      { name: "Github", url: "https://github.com/JucaRei" },
+      { name: "Twitter", url: "https://twitter.com" },
+      { name: "Linkedin", url: "https://www.linkedin.com" },
+    ],
+  };
+
+  // {about: about}
+  return res.render("about", { about });
 });
 
 server.get("/portfolio", function (req, res) {
