@@ -5,6 +5,9 @@ const routes = require("./routes");
 
 const server = express();
 
+// ler os dados recebidos(req.body)
+server.use(express.urlencoded({ extended: true }));
+
 // CSS, etc
 server.use(express.static("public"));
 // usar o routes
