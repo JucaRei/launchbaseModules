@@ -1,6 +1,8 @@
 const express = require("express");
 // responsável pelas rotas
 const routes = express.Router();
+// funções exportadas
+const instructors = require("./instructors");
 
 routes.get("/", function (req, res) {
   return res.redirect("/instructors");
@@ -14,15 +16,9 @@ routes.get("/instructors/create", function (req, res) {
   return res.render("instructors/create");
 });
 
-routes.post("/instructors", function (req, res) {
-  // req.query
-  // req.body
+routes.get("/instructors/:id", instructors.show);
 
-  // constructor = função que cria um objeto
-  const keys = Object.keys(req.body);
-
-  return res.send(keys);
-});
+routes.post("/instructors", instructors.post);
 
 routes.get("/members", function (req, res) {
   return res.send("members");

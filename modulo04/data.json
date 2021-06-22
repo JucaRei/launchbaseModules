@@ -1,0 +1,31 @@
+{
+  "instructors": [
+    {
+      "id": 1,
+      "avatar_url": "http://google.com",
+      "name": "Mota",
+      "birth": 377222400000,
+      "gender": "M",
+      "services": "Musculação, Spinner, Crossfit",
+      "created_at": 1624392986989
+    },
+    {
+      "id": 2,
+      "avatar_url": "http://google.com",
+      "name": "Diego",
+      "birth": 703987200000,
+      "gender": "M",
+      "services": "Musculação, Spinner, Natação",
+      "created_at": 1624393084391
+    },
+    {
+      "id": 3,
+      "avatar_url": "http://google.com",
+      "name": "Amanda",
+      "birth": 508032000000,
+      "gender": "F",
+      "services": "Yoga, Dança",
+      "created_at": 1624397982771
+    }
+  ]
+}

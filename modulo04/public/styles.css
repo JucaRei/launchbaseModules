@@ -115,8 +115,8 @@ header {
 }
 
 .details .item {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 16px 0;
+  border-bottom: 1px solid rgba(116, 69, 69, 0.09);
+  padding: 12px 0;
 }
 
 /* tirar a linha do ultimo elemento */
@@ -130,10 +130,10 @@ header {
   color: #777;
   font-size: 14px;
   /* da uma separado no texto */
-  line-height: 24px;
+  line-height: 26px;
   /* espaçamento entre as letras */
-  letter-spacing: 0.7px;
-  font-weight: normal;
+  letter-spacing: 0.8px;
+  font-weight: 600;
 }
 
 /* pega a segunda div */
@@ -152,7 +152,7 @@ header {
 .details .item span {
   padding: 8px 16px;
   background-color: var(--secundary-color);
-  border-radius: 16px;
+  border-radius: 1.8ex;
   color: #777;
   margin-right: 4px;
   margin-top: 8px;
@@ -168,9 +168,10 @@ header {
 input {
   width: 100%;
   outline: none;
-  color: #555;
+  color: #556;
   font-weight: bold;
   font-size: 18px;
+  padding: 2px;
 }
 
 /* só o radio */
@@ -180,7 +181,7 @@ input[type="radio"] {
 }
 
 input::placeholder {
-  font-size: 16px;
+  font-size: 17px;
   font-weight: normal;
 }
 
@@ -188,7 +189,7 @@ button[type="submit"] {
   padding: 8px 32px;
   background-color: var(--color-rocket);
   color: white;
-  border-radius: 8px;
+  border-radius: 10px;
   margin-top: 32px;
   width: 100%;
   font-size: 16px;
