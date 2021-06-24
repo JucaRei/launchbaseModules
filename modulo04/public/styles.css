@@ -185,7 +185,8 @@ input::placeholder {
   font-weight: normal;
 }
 
-button[type="submit"] {
+button[type="submit"],
+a.button {
   padding: 8px 32px;
   background-color: var(--color-rocket);
   color: white;
@@ -193,4 +194,24 @@ button[type="submit"] {
   margin-top: 32px;
   width: 100%;
   font-size: 16px;
+}
+
+button[type="submit"]:hover {
+  color: rgb(14, 28, 68);
+  background-color: rgba(245, 106, 25, 0.733);
+  cursor: pointer;
+}
+
+/* BOTÃO EDITAR */
+a.button {
+  display: block;
+  /* respeita o limite do box */
+  box-sizing: border-box;
+  text-align: center;
+  text-decoration: none;
+}
+
+a.button:hover {
+  color: rgb(14, 28, 68);
+  background-color: rgba(245, 106, 25, 0.733);
 }

@@ -25,6 +25,23 @@ module.exports = {
     // 12 - 12 = 0
     // 13 - 12 = 1
   },
+  date: function (timestamp) {
+    const date = new Date(timestamp);
+
+    // yyyy
+    const year = date.getUTCFullYear();
+
+    // mm (vai de 0 à 11)
+    const month = `0${date.getUTCMonth() + 1}`.slice(-2); // pega somente 2 digitos, se ouver mais ignora (no caso o 0)
+
+    // dd (de 01 à 31)
+    const day = `0${date.getUTCDate()}`.slice(-2);
+
+    // UTC = universal
+
+    // return yyyy-mm-dd
+    return `${year}-${month}-${day}`;
+  },
 };
 
 // 1573568256893

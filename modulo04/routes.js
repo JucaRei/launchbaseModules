@@ -1,4 +1,5 @@
 const express = require("express");
+const { render } = require("nunjucks");
 // responsável pelas rotas
 const routes = express.Router();
 // funções exportadas
@@ -17,6 +18,8 @@ routes.get("/instructors/create", function (req, res) {
 });
 
 routes.get("/instructors/:id", instructors.show);
+
+routes.get("/instructors/:id/edit", instructors.edit);
 
 routes.post("/instructors", instructors.post);
 
