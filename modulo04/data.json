@@ -55,9 +55,9 @@
       "created_at": 1624401372363
     },
     {
-      "id": 7,
+      "id": "7",
       "avatar_url": "http://google.com",
-      "name": "Angelica",
+      "name": "Angelica V",
       "birth": 835747200000,
       "gender": "F",
       "services": "Natação, Dança, Spinner",
@@ -73,12 +73,12 @@
       "created_at": 1624484395812
     },
     {
-      "id": 9,
+      "id": "9",
       "avatar_url": "http://google.com",
       "name": "Aladim",
       "birth": 595900800000,
       "gender": "M",
-      "services": "Musculação, Spinner, Crossfit",
+      "services": "Musculação, Spinner, Crossfit, Karate",
       "created_at": 1624484860657
     },
     {
