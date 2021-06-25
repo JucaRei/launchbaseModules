@@ -198,7 +198,7 @@ a.button {
 
 button[type="submit"]:hover {
   color: rgb(14, 28, 68);
-  background-color: rgba(245, 106, 25, 0.733);
+  background-color: rgba(124, 245, 25, 0.589);
   cursor: pointer;
 }
 
@@ -214,4 +214,16 @@ a.button {
 a.button:hover {
   color: rgb(14, 28, 68);
   background-color: rgba(245, 106, 25, 0.733);
+}
+
+/* BOTÃO DELETE */
+#form-delete button[type="submit"] {
+  margin-top: 2px;
+  background-color: rgba(197, 75, 187, 0.9);
+}
+
+#form-delete button[type="submit"]:hover {
+  color: rgb(1, 36, 133);
+  background-color: rgba(245, 25, 25, 0.733);
+  cursor: pointer;
 }

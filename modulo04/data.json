@@ -28,15 +28,6 @@
       "created_at": 1624397982771
     },
     {
-      "id": 4,
-      "avatar_url": "http://google.com",
-      "name": "bqiwdnqq",
-      "birth": -600998400000,
-      "gender": "F",
-      "services": "qwdqm, idnqwiq",
-      "created_at": 1624400854686
-    },
-    {
       "id": 5,
       "avatar_url": "http://google.com",
       "name": "Mayk",
@@ -46,12 +37,12 @@
       "created_at": 1624401294812
     },
     {
-      "id": 6,
+      "id": "6",
       "avatar_url": "http://google.com",
-      "name": "Mayk",
+      "name": "Mayk Brito",
       "birth": 470620800000,
       "gender": "M",
-      "services": "Musculação, Spinner",
+      "services": "Musculação, Spinner, Crossfit",
       "created_at": 1624401372363
     },
     {
