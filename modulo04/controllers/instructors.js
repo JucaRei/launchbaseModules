@@ -2,6 +2,7 @@ const fs = require("fs");
 const data = require("./data.json");
 const { age, date } = require("./utils");
 
+// Index
 exports.index = function (req, res) {
   return res.render("instructors/index", { instructors: data.instructors });
 };
@@ -37,6 +38,11 @@ exports.show = function (req, res) {
 };
 
 // Create
+exports.create = function (req, res) {
+  return res.render("instructors/create");
+};
+
+// Post
 exports.post = function (req, res) {
   const keys = Object.keys(req.body);
 
