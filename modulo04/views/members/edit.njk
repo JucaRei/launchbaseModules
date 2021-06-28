@@ -4,30 +4,30 @@
 
     <section 
         class="avatar" 
-        style="background: url(https://source.unsplash.com/collection/4365804/600x600) no-repeat center center / cover">
+        style="background: url({{member.avatar_url}}) no-repeat center center / cover">
     </section>
 
     <section class="details">
         {# methodOverride #}
-        <form  method="POST" action="/instructors?_method=PUT">
+        <form  method="POST" action="/members?_method=PUT">
         
-            <h3>Editar Instrutor</h3>
-                  
+            <h3>Editar Membro</h3>
             {# inclui algum pedaço de código #}
-            {% include 'instructors/fields.njk' %} 
+            {% include 'members/fields.njk' %} 
 
             <input 
                 type="hidden" 
                 name="id"
-                value={{instructor.id}}>
+                value={{member.id}}>
 
         </form>
 
-        <form id="form-delete" action="/instructors?_method=DELETE" method="post">
-            <input type="hidden" name="id" value={{instructor.id}}>
+        <form id="form-delete" action="/members?_method=DELETE" method="post">
+            <input type="hidden" name="id" value={{member.id}}>
             <button type="submit">Deletar</button>
         </form>
 
+        {% include "../confirmation.njk" %}
     </section>
 </div>
 {% endblock content %}

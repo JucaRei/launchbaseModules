@@ -165,7 +165,7 @@ header {
 
 /* FORM */
 
-input {
+input,select {
   width: 100%;
   outline: none;
   color: #556;
@@ -279,7 +279,8 @@ tbody tr td:first-child span {
   border: 1.5px solid gainsboro;
 }
 
-tbody tr td:last-child a {
+tbody tr td:last-child a,
+.table-container > a {
   background-color: rgba(39, 29, 131, 0.8);
   padding: 6px 12px;
   text-decoration: none;
@@ -287,6 +288,11 @@ tbody tr td:last-child a {
   color: white;
   font-size: 1rem;
   border-radius: 4px;
+}
+
+.table-container > a {
+  margin-bottom: 16px;
+  display: inline-block;
 }
 
 .table-container thead tr th:last-child,
