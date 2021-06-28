@@ -2,7 +2,8 @@ const express = require("express");
 // responsável pelas rotas
 const routes = express.Router();
 // funções exportadas
-const instructors = require("./instructors");
+const instructors = require("./controllers/instructors");
+const members = require("./controllers/members");
 
 routes.get("/", function (req, res) {
   return res.redirect("/instructors");
