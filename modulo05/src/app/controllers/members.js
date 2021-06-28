@@ -1,4 +1,4 @@
-const { age, date } = require("../lib/utils");
+const { age, date } = require("../../lib/utils");
 
 module.exports = {
   // shorthand da linguagem

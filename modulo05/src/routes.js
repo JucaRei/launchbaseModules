@@ -1,7 +1,5 @@
 const express = require("express");
-// responsável pelas rotas
 const routes = express.Router();
-// funções exportadas
 const instructors = require("./app/controllers/instructors");
 const members = require("./app/controllers/members");
 
@@ -25,5 +23,4 @@ routes.post("/members", members.post);
 routes.put("/members", members.put);
 routes.delete("/members", members.delete);
 
-// exportar
 module.exports = routes;

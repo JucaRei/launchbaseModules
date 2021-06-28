@@ -1,7 +1,7 @@
 {
-  "name": "modulo04",
+  "name": "modulo05",
   "version": "1.0.0",
-  "description": "Modulo 04 Controle de Academia",
+  "description": "Modulo 05 Controle de Academia com DB",
   "main": "server.js",
   "scripts": {
     "start": "npm-run-all -p nodemon browsersync",
@@ -11,7 +11,8 @@
   "dependencies": {
     "express": "^4.17.1",
     "method-override": "^3.0.0",
-    "nunjucks": "^3.2.3"
+    "nunjucks": "^3.2.3",
+    "pg": "^8.6.0"
   },
   "devDependencies": {
     "browser-sync": "^2.26.14",
