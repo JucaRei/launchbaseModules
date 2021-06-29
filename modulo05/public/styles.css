@@ -165,7 +165,8 @@ header {
 
 /* FORM */
 
-input,select {
+input,
+select {
   width: 100%;
   outline: none;
   color: #556;
@@ -274,9 +275,9 @@ tbody tr td:first-child span {
   height: 48px;
   background-position: center;
   background-size: cover;
-  border-radius: 22% 10%;
+  border-radius: 22%;
   box-shadow: 6px 2px 6px -5px black;
-  border: 1.5px solid gainsboro;
+  border: 1px solid rgba(220, 220, 220, 0.192);
 }
 
 tbody tr td:last-child a,

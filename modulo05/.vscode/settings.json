@@ -25,5 +25,17 @@
     "latex",
     "plaintext"
   ],
-  "git.ignoreLimitWarning": true
+  "git.ignoreLimitWarning": true,
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 5432,
+      "driver": "PostgreSQL",
+      "name": "Gym",
+      "database": "gymmanager",
+      "username": "postgres",
+      "password": "docker"
+    }
+  ]
 }
