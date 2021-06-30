@@ -8,7 +8,7 @@
         <input 
           type="text" 
           name="filter" 
-          placeholder="Filtrar ou Atendimento" 
+          placeholder="Nome ou Atendimento" 
           value="{{ filter }}"
         >
         <button type="submit">Filtrar</button>
@@ -26,7 +26,7 @@
       <tbody>
         {% for instructor in instructors %}
           <tr>
-            <td>
+            <td class="instructor_name" >
               <span style="background-image: url({{ instructor.avatar_url }})"></span>
               {{ instructor.name }}
             </td>

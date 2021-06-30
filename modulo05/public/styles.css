@@ -303,8 +303,12 @@ td:last-child {
 
 /* MEMBER INSTRUCTOR NAME */
 
+tbody tr td.instructor_name,
 .details .item div#name {
   text-transform: capitalize;
+}
+
+.details .item div#name{
   font-size: 1.3em;
 }
 
