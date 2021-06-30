@@ -1,12 +1,24 @@
 {% extends "layout.njk" %}
 {% block content %}
   <div class="card table-container">
-    <a href="/instructors/create">Novo</a>
+    <div class="header">
+      <a class="button" href="/instructors/create">Novo</a>
+      {# vai ficar na mesma pagina, passando uma query string #}
+      <form action="/instructors" method="GET">
+        <input 
+          type="text" 
+          name="filter" 
+          placeholder="Filtrar por Nome" 
+        >
+        <button type="submit">Filtrar</button>
+      </form>
+    </div>
     <table>
       <thead>
         <tr>
           <th>Instrutor</th>
           <th>Atendimento</th>
+          <th>Alunos</th>
           <th>Ação</th>
         </tr>
       </thead>
@@ -17,7 +29,8 @@
               <span style="background-image: url({{ instructor.avatar_url }})"></span>
               {{ instructor.name }}
             </td>
-            <td class="services">{{ instructor.services }}</td>
+            <td>{{ instructor.services }}</td>
+            <td>{{ instructor.total_students }}</td>
             <td>
               <a href="/instructors/{{ instructor.id }}">ver</a>
             </td>

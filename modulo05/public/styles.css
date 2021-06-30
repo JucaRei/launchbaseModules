@@ -300,3 +300,42 @@ tbody tr td:last-child a,
 td:last-child {
   text-align: center;
 }
+
+/* MEMBER INSTRUCTOR NAME */
+
+.details .item div#name {
+  text-transform: capitalize;
+  font-size: 1.3em;
+}
+
+/* FILTERS */
+.table-container .header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.table-container .header a {
+  margin: 0;
+  width: 120px;
+}
+
+.table-container .header form {
+  display: grid;
+  grid-template-columns: 1fr 120px;
+  align-items: center;
+  /* para respeitar os limites, precisa do box-sizing */
+  grid-gap: 8px;
+}
+
+.table-container .header form input{
+  border: 2px solid #eee;
+  border-radius: 10px;
+  padding: 4px 8px;
+  box-sizing: border-box;
+}
+
+.table-container .header form button {
+  margin: 0;
+  padding: 10px auto;
+}

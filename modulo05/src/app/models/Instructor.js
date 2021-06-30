@@ -3,11 +3,20 @@ const { date } = require("../../lib/utils");
 
 module.exports = {
   all(callback) {
-    db.query(`SELECT * FROM instructors`, function (err, results) {
-      if (err) throw `Database Error! Please review your application. ${err}`;
+    db.query(
+      `
+      SELECT instructors.*, count(members) AS total_students
+      FROM instructors 
+      LEFT JOIN members ON (instructors.id = members.instructor_id)
+      GROUP BY instructors.id
+      ORDER BY total_students DESC
+      `,
+      function (err, results) {
+        if (err) throw `Database Error! Please review your application. ${err}`;
 
-      callback(results.rows);
-    });
+        callback(results.rows);
+      }
+    );
   },
   create(data, callback) {
     // data = req.body
@@ -51,6 +60,23 @@ module.exports = {
         if (err) throw `Database Error! ${err}`;
 
         callback(results.rows[0]);
+      }
+    );
+  },
+  findBy(filter, callback) {
+    db.query(
+      `
+      SELECT instructors.*, count(members) AS total_students
+      FROM instructors 
+      LEFT JOIN members ON (instructors.id = members.instructor_id)
+      WHERE instructors.name ILIKE '%${filter}%'
+      GROUP BY instructors.id
+      ORDER BY total_students DESC
+      `,
+      function (err, results) {
+        if (err) throw `Database Error! Please review your application. ${err}`;
+
+        callback(results.rows);
       }
     );
   },
