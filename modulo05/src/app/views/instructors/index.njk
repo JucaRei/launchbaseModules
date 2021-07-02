@@ -3,7 +3,7 @@
   <div class="card table-container">
     <div class="header">
       <a class="button" href="/instructors/create">Novo</a>
-      {# vai ficar na mesma pagina, passando uma query string #}
+      {# vai ficar na mesma pagina, passando uma query strin g #}
       <form action="/instructors" method="GET">
         <input 
           type="text" 
@@ -39,5 +39,10 @@
         {% endfor %}
       </tbody>
     </table>
+    <div class="pagination" 
+      data-page={{pagination.page}}
+      data-total={{pagination.total}}
+      data-filter={{filter}}
+    ></div>
   </div>
 {% endblock content %}

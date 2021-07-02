@@ -308,7 +308,7 @@ tbody tr td.instructor_name,
   text-transform: capitalize;
 }
 
-.details .item div#name{
+.details .item div#name {
   font-size: 1.3em;
 }
 
@@ -332,7 +332,7 @@ tbody tr td.instructor_name,
   grid-gap: 8px;
 }
 
-.table-container .header form input{
+.table-container .header form input {
   border: 2px solid #eee;
   border-radius: 10px;
   padding: 4px 8px;
@@ -342,4 +342,34 @@ tbody tr td.instructor_name,
 .table-container .header form button {
   margin: 0;
   padding: 10px auto;
+}
+
+/* PAGINATION */
+.table-container {
+  display: grid;
+  /* em linhas | 1 coluna só */
+  grid-template: 64px 1fr 16px / 1fr;
+}
+
+.table-container .header {
+  margin: 0;
+  align-self: start;
+}
+
+.table-container .pagination {
+  margin: 0;
+  align-self: end;
+  justify-self: center;
+}
+
+.pagination a,
+.pagination span {
+  color: var(--color-rocket);
+  text-decoration: none;
+  margin-right: 16px;
+}
+
+.pagination a:hover {
+  filter: brightness(0.3);
+  border-bottom: 1px solid var(--color-rocket);
 }
